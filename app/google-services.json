@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "300774939276",
+    "project_id": "musiclib-dba83",
+    "storage_bucket": "musiclib-dba83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300774939276:android:172569555e25dd5c4539a9",
+        "android_client_info": {
+          "package_name": "ru.neogame.music"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFO2HSl5a9D_pqU3kI6GtWgeO7SUbcR50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300774939276:android:f755046e8059dc4c4539a9",
+        "android_client_info": {
+          "package_name": "ru.neogame.musiclib"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFO2HSl5a9D_pqU3kI6GtWgeO7SUbcR50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

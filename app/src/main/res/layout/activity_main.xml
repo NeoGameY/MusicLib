@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainmenu"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueDark"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logo_image_view"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/logotip"
+            android:layout_centerVertical="true"
+            app:tint="@color/white" />
+
+        <!-- <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добро пожаловать"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"/> -->
+
+        <ImageView
+            android:id="@+id/lupa_image_view"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/lupa_27"
+            android:layout_toStartOf="@id/menu_image_view"
+            android:layout_marginRight="32px"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"
+
+
+            android:visibility="gone"/>
+
+
+
+        <ImageView
+            android:id="@+id/menu_image_view"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/icon_menu"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="false"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/menu_image_view"
+            android:layout_toEndOf="@+id/logo_image_view"
+            android:focusable="true"
+            android:clickable="true"
+
+            android:background="@drawable/search_view_background"
+            android:backgroundTint="@color/white"
+
+            android:layoutDirection="rtl"
+
+            app:backgroundTint="@color/white"
+            app:iconifiedByDefault="true"
+            app:queryHint="Найти аудио журнал"
+            app:searchHintIcon="@null"
+            app:searchIcon="@drawable/lupa_27_kopia"
+            app:submitBackground="@color/white">
+        </androidx.appcompat.widget.SearchView>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_above="@id/player_view"
+        android:layout_below="@id/toolbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/section_1_main_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/section_1_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/black"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/song_cover_image_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/song_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сейчас играет : "
+            android:textColor="@color/white"
+            android:layout_toEndOf="@id/song_cover_image_view"
+            android:paddingStart="16dp"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

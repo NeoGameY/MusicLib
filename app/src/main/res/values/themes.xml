@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MusicLib" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.MusicLib" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/blueDark</item>
+    </style>
+
+    <style name="Theme.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@color/blueDark</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/blueDark</item>
+        <item name="android:background">@color/blueDark</item>
+        <item name="android:statusBarColor">@color/blueDark</item>
+
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <!-- Установка прозрачного фона -->
+        <item name="android:background">@android:color/transparent</item>
+        <!-- Установка иконки поиска в правую сторону -->
+        <item name="android:layoutDirection">rtl</item>
+    </style>
+
+
+
+</resources>
